@@ -1,0 +1,106 @@
+.daohang{
+    width: 54%;
+    height: 90px;
+    left: 23%;
+    min-width: 850px;
+    max-width: 1024px;
+    z-index: 21;
+    position: absolute;
+}
+.daohang img{
+    width: 40px;
+    height: 40px;
+    float: left;
+    margin:25px 0; 
+}
+.daohang span{
+    font-size: 30px;
+    color: #fff;
+    display: block;
+    width:185px;
+    height: 40px;
+    float: left;
+    margin:25px 0; 
+    margin-left: 10px;
+}
+.daohang ul{
+    float: right;
+    height: 100%;
+    width: 560px;
+}
+.daohang ul li{
+    float: left;
+    width: 140px;
+    height: 100%;
+}
+.daohang ul li:hover{   
+    background-color: #1A2433;
+    opacity: 0.7;
+}
+.liHover{
+    background-color: #1A2433;
+    opacity: 0.7; 
+}
+.daohang ul li a{
+    width: 120px;
+    height: 90px;
+    display: block;
+    text-align: center;
+    line-height: 90px;
+    color: #fff;
+    font-size:20px;
+    margin: 0 auto;
+    cursor: pointer;
+}
+.daohangClick{   
+    height: 84px!important; 
+    border-bottom: 6px solid #3388FF;
+}
+.dao_hover{
+    width: 54%;
+    min-width: 850px;
+    max-width: 1024px;
+    left: 23%;
+    top: 90px;
+    z-index: 19;
+    position: absolute;
+}
+.dao_hover ul{
+    float: right;
+    width: 560px;
+    height: 1px;
+    position: relative;
+}
+.dao_hover ul li{
+    padding-top: 1px;
+    width: 140px;
+    height: 10px;
+    top: 0;
+    left: calc(23%);
+    right: calc(23%);
+    display: none;
+    position: absolute;
+}
+.dao_hover ul li:nth-child(1){
+    left: 0;
+}
+.dao_hover ul li:nth-child(2){
+    left: 140px;
+}
+.dao_hover ul li:nth-child(3){
+    left: 280px;
+}
+.dao_hover ul li:nth-child(4){
+    left: 420px;
+}
+.dao_hover ul li a{
+    display: block;
+    width: 140px;
+    height: 60px;
+    color:#fff;
+    background-color: #1A2433;
+    text-align: center;
+    line-height: 60px;
+    opacity: 0.7;
+    font-size: 12px;
+}

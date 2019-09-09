@@ -1,0 +1,211 @@
+.rightFrom{
+    position: absolute;
+    right: 0;
+    height: 100%;
+    width: 350px;
+    z-index: 20;    
+    overflow: hidden;
+}
+#swiper3{
+    position: absolute;
+    right: 0px;
+    height: 100%;
+    width: 350px;
+    z-index: 10;
+    overflow: hidden;
+}
+#swiper3 .swiper-slide{
+    -webkit-filter: blur(16px);
+    filter:progid:DXImageTransform.Microsoft.opacity(0.5);
+    -moz-filter: blur(16px);
+    width:450px;
+    margin-left: -50px;
+    background-position: 103.4%;
+}
+#swiper3 .swiper-slide:nth-child(1){
+    background-image: url('../img/index_img/bg_home.jpg')
+}
+#swiper3 .swiper-slide:nth-child(2){
+    background-image: url('../img/index_img/bg_community.jpg')
+}
+#swiper3 .swiper-slide:nth-child(3){
+    background-image: url('../img/index_img/bg_store.jpg')
+}
+.bbb{
+    z-index: 21;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.rightFrom h3:first-child{
+    display: block;
+    width: 100%;
+    height: 90px;
+    line-height: 90px;
+    font-size: 20px;
+}
+.rightFrom h3:last-child{
+    display: block;
+    width: 100%;
+    height: 79px;
+    line-height: 79px;
+    font-size: 20px;
+}
+.rightFrom .li_lable{
+    position: relative;
+}
+.rightFrom .li_lable .li_4zhihou{
+    overflow: hidden;
+}
+.rightFrom .li_lable .li_4zhihou:nth-child(n+3){
+    width: 240px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+.li_lable .li_4zhihou:nth-child(n+3) label{
+    margin-right: 10px;
+    line-height: 26px;
+    color: #fff;
+    font-size: 14px;
+    display: inline;
+}
+.li_lable .li_4zhihou:nth-child(n+3) input{
+    width: 200px;
+    color: #fff;
+    height: 26px;
+    border: 0;
+    background-color: transparent;
+    border-bottom: 1px solid #fff;
+    outline: 0;
+}
+.li_lable .li_4zhihou:last-child{
+    margin-bottom: 0;
+}
+.li_lable .li_4zhihou:nth-child(6){
+    height: 28px;
+}
+.li_lable .li_4zhihou:nth-child(6) input{
+    border: 0;
+}
+.div_area{
+    width: 198px;
+    height: 24px;
+    float: right;
+    background-color: #1A2433;
+    border: 1px solid #fff;
+    border-radius: 5px; 
+    position: relative;
+    opacity: 0.4;
+}
+.div_area input{
+    width: 188px;
+    height: 24px;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    border-radius: 5px;
+    padding-left: 10px;
+    line-height: 26px;
+    background-color: yellow;
+}
+.div_area img{
+    width: 5px;
+    height: 4px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+}
+.check_ul{
+    width: 238px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding-bottom: 3px;
+}
+.check_ul li{
+    float: left;
+    margin-right: 20px;
+    height: 16px;
+    line-height: 16px;
+    margin-top: 10px;
+    cursor: pointer;
+    user-select:none
+}
+.span_gou{
+    background-color: #fff;
+}
+.check_ul li span:nth-child(1){
+    width: 10px;
+    height: 10px;
+    margin: 3px 5px;
+    margin-left: 0;
+    display: block;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    float: left;
+}
+.check_ul li span:nth-child(2){
+    display: block;
+    float: left;
+    font-size: 12px;
+    font-weight: bold;
+    color: #fff;
+}
+.check_ul li .lb_qt{
+    margin:0;
+    line-height: 16px;
+    color: #fff;
+    font-size: 12px;
+}
+.check_ul li .in_qt{
+    width: 95px;
+    color: #fff;
+    height: 15px;
+    border: 0;
+    background-color: transparent;
+    border-bottom: 1px solid #fff;
+    outline: 0;
+    margin-left: 5px;
+}
+.butn{
+    width: 140px;
+    height: 36px;
+    display: block;
+    background-color: #fff;
+    opacity: 0.8;
+    text-align: center;
+    line-height: 36px;
+    color: #38f;
+    font-size: 12px;
+    clear: both;
+    margin: 40px auto;
+    cursor: pointer;
+}
+.butn:hover{
+    opacity: 1;
+}
+.saoma_ul{
+    width: 300px;
+    margin: 0 25px;
+    overflow: hidden;
+    margin-top: 83px;
+}
+.twoshequ{
+    margin-top: 250px;
+}
+.saoma_ul li{
+    float: left;
+    width: 50%;
+    text-align: center;
+}
+.saoma_ul li span{
+    color: #fff;
+}
+.saoma_ul li img{
+    width: 120px;
+    margin:20px 15px;
+}

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script type="text/javascript" src="./js/jquery-3.3.1.min.js"></script>
+</head>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+    }
+    .div1{
+        width: 230px;
+        margin: 100px auto;
+        height: 300px;
+        overflow: hidden;
+        border: 1px solid #000;
+    }
+    ul{
+        width: 210px;
+        min-height: 300px;
+        list-style: none;
+        float: left;
+        background-color: red;
+    }
+    li{
+        width: 70px;
+        height: 40px;
+        float: left;
+        line-height: 40px;
+        text-align: center;
+    }
+    .div1 .div2{
+        float: left;
+        width: 20px;
+        padding: 10px 0;
+        height: 280px;
+        user-select:none;
+        overflow: hidden;
+        background-color: #000;
+    }
+    span{
+        display: block;
+        float: left;
+        border-radius: 3px;
+        width: 14px;
+        background-color: #ccc;
+        margin: 0 3px;
+        cursor: pointer;
+        text-align: center;
+    }
+</style>
+<body>
+    <div class="div1">
+        <ul id='ul'>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>7</li>
+            <li>8</li>
+            <li>9</li>
+            <li>10</li>
+            <li>11</li>
+            <li>12</li>
+            <li>13</li>
+            <li>14</li>
+            <li>15</li>
+            <li>16</li>
+            <li>17</li>
+            <li>18</li>
+            <li>19</li>
+            <li>20</li>
+            <li>21</li>
+            <li>22</li>
+            <li>23</li>
+            <li>24</li>
+            <li>25</li>
+            <li>26</li>
+            <li>27</li>
+            <li>28</li>
+            <li>29</li>
+            <li>28</li>
+            <li>29</li>
+        </ul> 
+        <div class="div2">
+            <span>0</span>
+        </div>
+    </div>
+    <script>
+        $(function(){
+            let div1H = $('.div1').height();//div1高度
+            let div2H = $('.div2').height();//div2高度
+            let ulH = $('#ul').height();    //ul高度
+            let spanH = (div1H / ulH).toFixed(2)*1*div2H;//span高度
+            $('span').css({'height':`${spanH}px`,'line-height':`${spanH}px`})
+            let yinUl = ulH - div1H;    //div1减ul剩余的高度
+            let yinSpan = div2H - spanH; //div2减去span剩余的高度
+            let gunD = yinSpan / 4    //span滚动一次的高度
+            let ulD = yinUl / 3       //ul滚动一次的高度
+            let spanF = gunD/yinSpan    //下拉的高度占全部可下拉高度的比率
+            var spanLa = 0;
+            var ulXia = 0;
+            $('.div2').mouseover(function(){
+                window.onmousewheel = function(e){
+                    if(e.wheelDelta < 0){
+                        if( spanLa < yinSpan){
+                            spanLa+=gunD;
+                            let ulLa = spanLa/yinSpan//span下拉找可拉比率
+                            let ulTop = ulLa*yinUl; //ul内容实际要下拉高度
+                            $('span').css('margin-top', spanLa)
+                            $('#ul').css('margin-top', `-${ulTop}px`)
+                        }
+                    }else{
+                        if(spanLa>0){
+                            spanLa = spanLa<gunD?0:spanLa-gunD;
+                            let ulLa = spanLa/yinSpan//span下拉占可拉比率
+                            let ulTop = ulLa*yinUl; //ul内容实际要下拉高度
+                            $('span').css('margin-top', spanLa)
+                            $('#ul').css('margin-top', `-${ulTop}px`)
+                        }
+                    }
+                }
+            }).mouseout(function(){
+                window.onmousewheel = null;
+            })
+            $('span').mousedown(function(e){
+                let y = e.pageY;
+                let x1 = e.pageX-100;
+                let x2 = e.pageX+100;
+                let marT = $('span').css('marginTop').replace('px', '')*1;
+                let ulmarT = $('span').css('marginTop').replace('px', '')*1;
+                $('span').css('background-color', '#fff')
+                $(window).mousemove(function(e){
+                    let spTop = e.pageY - y ;
+                    let xYi1 = e.pageX;
+                    if(spTop<yinSpan &&  xYi1>x1 && xYi1<x2){
+                        if(spTop+marT>=0 && spTop+marT <= yinSpan){
+                            $('span').css('margin-top', marT+spTop)
+                            let newMarT = $('span').css('marginTop').replace('px', '')*1;
+                            console.log(-newMarT/yinSpan*yinUl)
+                            $('#ul').css('margin-top', -newMarT/yinSpan*yinUl)                            
+                        }
+                    }                        
+                }).mouseup(function(e){
+                    $(window).off('mousemove');
+                    $('span').css('background-color', '#ccc')
+                })
+            })
+
+
+
+
+
+
+
+
+            $('.div1').mouseover(function(){
+                window.onmousewheel = function(e){
+                    if(e.wheelDelta < 0){
+                        if(ulXia < yinUl){
+                            ulXia += ulD;
+                            let labi = ulXia/yinUl //ul下拉占可拉比率
+                            let spanTop = labi*yinSpan
+                            console.log(ulXia)
+                            $('#ul').css('margin-top', `-${ulXia}px`)
+                            $('span').css('margin-top', spanTop)
+                        }
+                    }else{
+                        if(ulXia > 0){
+                            ulXia = ulXia<ulD?0:ulXia-ulD
+                            let labi = ulXia/yinUl //ul下拉占可拉比率
+                            let spanTop = labi*yinSpan
+                            console.log(ulXia)
+                            $('#ul').css('margin-top', `-${ulXia}px`)
+                            $('span').css('margin-top', spanTop)
+                        }
+                    }
+                }
+            }).mouseout(function(){
+                window.onmousewheel = null;
+            })
+        })
+        // $(function(){
+        //     let div1W = $('.div1').height();
+        //     let div2W = $('.div1 ul').height();
+        //     let Wid = (div1W / div2W).toFixed(2)*1//百分比
+        //     let Hei = Wid*div1W;
+        //     let jyc;            
+        //     var a=0;
+        //     $('span').css('height', `${Hei}px`).parent().mousedown(function(e){
+        //         jyc = 0
+        //         let y = e.pageY;//点击时获取y坐标
+        //         $('body').mousemove(function(e){
+        //             let newY = e.pageY//移动时获取Y坐标
+        //             let xia = newY - y; //移动后的坐标-一开始的坐标 = 上下移动的距离
+        //             let max = xia + Hei;    //最大移动范围
+        //             let divDuan = $('.div1').height()-20  //.div2的实际高度
+        //             if(xia>=0 && max<=divDuan){
+        //                 let aaa = xia/(divDuan-Hei)  //上下移动的距离/(实际宽度-滚动条高度) (滚动条移到最顶上为0，最底下为1)
+        //                 let cha = $('ul').height() - $('.div1').height() //ul高度 - .div1高度 =ul影藏高度的大小的
+        //                 let c = cha*aaa //ul隐藏高度*aaa = ul移动的高度
+        //                 $('span').css('margin-top', xia)
+        //                 $('#ul').css('margin-top', `-${c}px`)
+        //             }
+        //         }).mouseup(function(){
+        //             $(this).off('mousemove')
+        //         })
+        //     }).mouseover(function(e){
+        //         window.onmousewheel = function(e){        
+        //             let qwe = $('.div2').height() - $('span').height()            
+        //             if(e.wheelDelta < 0){
+        //                 a = a>=qwe?qwe:a+15.2
+        //             }else{
+        //                 a = a<=0?0:a-15.2
+        //             }
+        //             let bb = a/qwe;
+        //             let cc = div2W - div1W
+        //             console.log(bb)
+        //             let dd = cc*bb
+        //             $('span').css('margin-top', `${a}px`)
+        //             $('#ul').css('margin-top', `-${dd}px`)
+        //         }
+        //     }).mouseout(function(){
+        //         window.onmousewheel = null;
+        //     })
+
+        //     $('#ul').mousemove(function(e){
+        //         window.onmousewheel = function(e){ 
+        //             let cc = div2W - div1W
+        //             if(e.wheelDelta < 0){
+        //                 a = a>=cc?cc:a+28
+        //             }else{
+        //                 a = a<=0?0:a-28
+        //             }
+        //             let bb = a/cc;
+        //             let qwe = $('.div2').height() - $('span').height()  
+        //              let dd = bb*qwe
+        //             $('#ul').css('margin-top', `-${a}px`)
+        //             $('span').css('margin-top', `${dd}px`)
+        //         }
+        //     }).mouseout(function(){
+        //         window.onmousewheel = null;
+        //     })
+        // })
+    </script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+
+.conts .shebei_text{
+    width: 1024px;
+    overflow: hidden;
+    margin: 30px auto;
+    margin-bottom: 0;
+}
+.conts .shebei_text .lis_ul{
+    height: 360px;
+    width: 100%;
+    position: relative;
+}
+.conts .shebei_text .lis_ul:first-child{
+    background:url('../img/family_img/li1_bj.png');
+    background-size: cover;
+}
+.conts .shebei_text .lis_ul:nth-child(2){
+    background:url('../img/family_img/li2_bj.png');
+    background-size: cover;
+}
+.conts .shebei_text .lis_ul:nth-child(3){
+    background:url('../img/family_img/li3_bj.png');
+    background-size: cover;
+}
+.conts .shebei_text .lis_ul:nth-child(4){
+    background:url('../img/family_img/li4_bj.png');
+    background-size: cover;
+}
+.conts .shebei_text .lis_ul:nth-child(5){
+    background:url('../img/family_img/li5_bj.png');
+    background-size: cover;
+}
+.conts .shebei_text .lis_ul .gezi_cont{
+    width: 1024px;
+    position: absolute;
+    height: 180px;
+    background-color: #1A2433;
+    opacity: 0.8;
+    z-index: 10;
+    bottom: 0;
+}
+.conts .shebei_text .lis_ul:first-child .gezi_cont li,.conts .shebei_text .lis_ul:nth-child(4) .gezi_cont li{
+    width: 300px;
+    height: 160px;
+    padding-top: 20px;
+    flex-direction: row;
+    color: #fff;
+    float: left;
+    margin-left: 30px;
+}
+.gezi_cont li img{
+    width: 50px;
+    height: 50px;
+    float: left;
+    font-weight: bold;
+    margin-right: 10px;
+}
+.gezi_cont li h5{
+    font-size: 14px;
+    text-align: left;
+    line-height: 50px;
+}
+.gezi_cont li p{
+    display: block;
+    width: 100%;
+    clear: both;
+    font-size: 12px;
+    line-height: 20px;
+    margin-top: 10px;
+    color: #fff;
+    opacity: 0.5;
+}
+.conts .shebei_text .lis_ul:first-child .gezi_cont li:nth-child(2){
+    margin-left: 32px;
+}
+.conts .shebei_text .lis_ul:first-child .gezi_cont li:last-child{
+    margin-left: 32px;
+}
+.conts .shebei_text .lis_ul:nth-child(2) .gezi_cont li,
+.conts .shebei_text .lis_ul:nth-child(3) .gezi_cont li,
+.conts .shebei_text .lis_ul:nth-child(5) .gezi_cont li{
+    width: 231px;
+    float: left;
+    margin-left: 20px;
+}
+.conts .shebei_text .lis_ul:last-child{
+    height: 530px;
+}
+.conts .shebei_text .lis_ul:nth-child(5) .gezi_cont{
+    width: 1024px;
+    position: absolute;
+    height: 360px;
+    background-color: #1A2433;
+    opacity: 0.8;
+    z-index: 10;
+    bottom: 0;
+}
+.conts .shebei_text .lis_ul:nth-child(5) .gezi_cont li{
+    height: 170px;
+}

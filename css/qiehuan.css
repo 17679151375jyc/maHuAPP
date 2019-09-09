@@ -1,0 +1,109 @@
+body{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.cans{
+    position: absolute;
+    z-index: 10;
+    opacity: 0.7;
+}
+.sw-co-index {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index:9;
+} 
+.fenYe{
+    position: absolute;
+    z-index: 20;
+}
+.sw-co-index .swiper-slide:nth-child(1){
+    background: url('../img/index_img/bg_home.jpg') center no-repeat;
+}
+.sw-co-index .swiper-slide:nth-child(2){
+    background: url('../img/index_img/bg_community.jpg')  center no-repeat;
+}
+.sw-co-index .swiper-slide:nth-child(3){
+    background: url('../img/index_img/bg_store.jpg') center no-repeat;
+}
+.my-bullet{
+    float: left;
+    left: 70px;
+}
+.swiper-container-vertical>.swiper-pagination-bullets .swiper-pagination-bullet{
+    margin: 30px 0;
+}
+.swiper-pagination-bullet{
+    opacity: 1;
+    width: 40px;
+    height: 40px;
+    border: 6px solid #fff;
+    background-color: transparent;
+}
+.my-bullet-active{
+    background-color: #fff;
+}
+
+.swiper2{
+    position: absolute;
+    width: 520px;
+    height: 100%;
+    z-index: 20;
+    left: 180px;
+}
+.swiper2  .swiper-slide img{
+    margin-top: 278px;
+}
+.swiper2  .slide1 img{
+    width: 11.2vw;
+    height: 6.74vw;
+    float: left;
+}
+.swiper2  .slide2 img{
+    width: 9.55vw;
+    height: 9.27vw;
+    float: left;
+}
+.swiper2  .slide3 img{
+    width: 9vw;
+    height: 9vw;
+    float: left;
+}
+.swiper2 .span_title{
+    height: 180px;
+    font-size: 4vw;
+    font-weight: bold;
+    color: #fff;
+    display: block;
+    line-height: 5.2vw;
+    float: left;
+    margin-left: 20px;
+    margin-bottom: 2.24vw;
+    margin-top: 278px;
+}
+.swiper2 .swiper-wrapper .heng_xian{
+    width: 22.5vw;
+    height: 1px;
+    display: block;
+    clear: both;
+    background-color: #fff;
+}
+.swiper2 .swiper-wrapper h4{
+    text-align: left;
+    font-size: 1.6vw;
+    font-weight: bold;
+    margin-top: 40px;
+}
+.swiper2 .swiper-wrapper .span_h5{
+    text-align: left;
+    font-size: 1.6vw;
+    display: block;
+    color: #fff;
+    margin-top: 20px;
+    margin-bottom: 40px; 
+}
+.swiper2 .swiper-wrapper a{
+    font-size: 1vw;
+    color: #fff;
+}

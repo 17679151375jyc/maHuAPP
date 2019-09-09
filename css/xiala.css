@@ -1,0 +1,78 @@
+.ctiys_div{
+    position: absolute;
+    width: 198px;
+    height: 248px;
+    border-radius: 5px;
+    border: 1px solid #fff;
+    background-color: #1A2433;
+    z-index: 30;
+    left: 94px;
+    top: 334px;
+    display: none;
+}
+.ctiys_div .xuanhao{
+    width: 198px;
+    min-height: 26px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background-color: #000;
+    color: #fff;
+    overflow: hidden;
+}
+.ctiys_div .xuanhao li{
+    opacity: 0.5;
+    font-size: 10px;
+    margin-left: 10px;
+    float: left;
+    line-height: 26px;
+    cursor: pointer;
+}
+.ctiys_div .xuanhao li:hover{
+    opacity: 1;
+}
+.ctiys_div .xuanhao span{
+    opacity: 1;
+    width: 40px;
+    line-height: 26px;
+    display: block;
+    height: 26px;
+    font-size: 10px;
+    float: left;
+    margin-left: 10px;
+}
+.list_area{
+    width: 198px;
+    max-height: 222px;
+    overflow: auto;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    position: relative;
+    overflow-x:hidden
+}
+.list_area li{
+    width: 65px;
+    height: 30px;
+    float: left;
+    user-select:none;
+    line-height: 30px;
+    text-align: center;
+    font-size: 10px;
+    opacity: 0.5;
+    color: #fff;
+}
+.list_area li:hover{
+    opacity: 1;
+}
+.list_area li:nth-child(3n+3){
+    margin-right: -8px;
+}
+.list_area::-webkit-scrollbar{
+    width: 8px;
+    -moz-width: 8px;
+}
+.list_area::-webkit-scrollbar-thumb{
+    background-color: #000;
+    -moz-background-color: #000;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+}
